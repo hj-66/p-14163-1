@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>질문 목록</title>
+</head>
+<body>
+<h1>질문목록</h1>
+
+<ul>
+    <li th:each="q : ${questionList}">
+        [[${q.id}]] : [[${q.getSubject()}]]
+    </li>
+</ul>
+
+</body>
+</html>
