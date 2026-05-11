@@ -13,7 +13,6 @@ import org.springframework.transaction.annotation.Transactional;
 
 import java.time.LocalDateTime;
 
-@Profile("test")
 @Configuration
 @RequiredArgsConstructor
 public class TestInitData {
@@ -45,6 +44,7 @@ public class TestInitData {
         q2.setCreateDate(LocalDateTime.now());
 
         q2.addAnswer("네 자동으로 생성됩니다.");
+        q2.addAnswer("맞습니다!");
 
         questionRepository.save(q2); // 두번째 질문 저장
     }
